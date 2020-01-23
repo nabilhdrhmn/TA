@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		body{
+			margin: auto;
+		}
+	</style>
+	<title>Mixed Reality</title>
+</head>
+<body>
+	{% for table in tables %}
+				{{ table|safe }}
+	{% endfor %}
+</body>
+</html>
