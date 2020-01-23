@@ -7,8 +7,17 @@ from nltk.stem import WordNetLemmatizer
 from gensim.models import FastText as ft
 from gensim.similarities import WmdSimilarity
 
+nltk.download('stopwords')
+nltk.download('punkt')
+nltk.download('wordnet')
+
 pd.options.mode.chained_assignment = None  # default='warn
-app = Flask(__name__)
+# app = Flask(__name__)
+app = Flask(__name__,
+            static_url_path='',
+            static_folder='public',
+            template_folder='templates')
+
 
 lemmatizer=WordNetLemmatizer()
 stop_words = stopwords.words('english')
